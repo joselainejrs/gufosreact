@@ -40,7 +40,7 @@ const PermissaoAdmin = ({ component : Component }) => (
 const PermissaoAluno = ({ component : Component }) => (
     <Route 
         render={props =>
-            usuarioAutenticado() && parseJwt().Role === "Anpm starluno" ? (
+            usuarioAutenticado() && parseJwt().Role === "Aluno" ? (
                 <Component {...props}/>
             ) : (
                 <Redirect to={{ pathname : "/login"}}/>
